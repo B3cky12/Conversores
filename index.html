@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Conversor de Moedas</title>
+  <title>CodePen - Conversor de Temperatura</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -10,22 +10,21 @@
 <!-- partial:index.partial.html -->
 <div class="container">
   <h1 class="page-title">
-    Conversor de moedas
+    Conversor de Temperatura
   </h1>
   <p class="page-subtitle">
-    Descubra quanto vale as suas moedas!!
+    Descubra os graus em outras escalas
   </p>
   <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
-  <label for="moeda" class="label">Insira o valor em Real</label><br>
-  <input type="number" id="real" size="2" /><br>
-	<div>
-		<p>Converter para:</p>
-  <button type="button" onclick="ConverterDolar()">Dólar</button>
-		<button type="button" onclick="ConverterEuro()">Euro</button>
-		<button type="button" onclick="ConverterLibraE()">Libra Esterlina</button>
-		<button type="button" onclick="Bitcoin()">Bitcoin</button>
-	</div><br>
-  <h2 id="conversao"></h2>
+  <label for="number">Insira o valor que você quer converter</label><br>
+  <input type="number" id="valor" size="2" /><br>
+  <label>Em que escala esse valor é medido?</label>
+  <div>
+    <button type="button" onclick="Celsius()">Celsius (°C)</button>
+    <button type="button" onclick="Fahrenheit()">Fahrenheit (°F)</button>
+    <button type="button" onclick="Kelvin()">Kelvin (°K)</button>
+  </div><br>
+  <h2 id="conversao">Resultado ...</h2>
 </div>
 <a href="https://alura.com.br/" target="_blank">
   <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">

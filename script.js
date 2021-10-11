@@ -1,38 +1,50 @@
-function ConverterDolar() {
-  var valorReal = parseFloat(document.getElementById("real").value);
-  //console.log(valorReal);
+function Celsius() {
+  var valorC = parseFloat(document.getElementById("valor").value);
 
-  var realToDolar = valorReal * 0.19;
-  //console.log(valorReal + " reais valem:");
-	//console.log(realToDolar.toFixed(2) + " dolares, " + realToEuro.toFixed(2) + " euros e" + realToLibraE.toFixed(2) + " libras Esterlinas.");
-	
-	var elementoDolar = document.getElementById("conversao");
-	
-	elementoDolar.innerHTML = "R$ " + valorReal + " valem $ " + realToDolar.toFixed(2) + " dolares.";
+  var Fahrenheit = (valorC * 9) / 5 + 32;
+  var Kelvin = valorC + 273.15;
+
+  var elementConverted = document.getElementById("conversao");
+
+  elementConverted.innerHTML =
+    valorC.toFixed(1) +
+    "°C equivale a " +
+    Fahrenheit.toFixed(1) +
+    "°F e " +
+    Kelvin.toFixed(1) +
+    "°K.";
 }
 
-function ConverterEuro() {
-	var valorReal = parseFloat(document.getElementById("real").value);
-  //console.log(valorReal);
+function Fahrenheit() {
+  var valorF = parseFloat(document.getElementById("valor").value);
 
-  var realToEuro = valorReal * 0.16;
-	
-		var elementoEuro = document.getElementById("conversao");
-	
-	elementoEuro.innerHTML = "R$ " + valorReal + " valem € " + realToEuro.toFixed(2) + " euros."
+  var Celsius = ((valorF - 32) * 5) / 9;
+  var Kelvin = ((valorF - 32) * 5) / 9 + 273.15;
+
+  var elementConverted = document.getElementById("conversao");
+
+  elementConverted.innerHTML =
+    valorF.toFixed(1) +
+    "°F equivale a " +
+    Celsius.toFixed(1) +
+    "°C e " +
+    Kelvin.toFixed(1) +
+    "°K.";
 }
 
-function ConverterLibraE() {
-	var valorReal = parseFloat(document.getElementById("real").value);
-  //console.log(valorReal);
+function Kelvin() {
+  var valorK = parseFloat(document.getElementById("valor").value);
 
-  var realToLibraE = valorReal * 0.14;
-	
-	var elementoLibraE = document.getElementById("conversao");
-	
-	elementoLibraE.innerHTML = "R$ " + valorReal + " valem £ " + realToLibraE.toFixed(2) + " libras esterlinas."
-}
+  var Celsius = valorK - 273.15;
+  var Fahrenheit = ((valorK - 273.15) * 9) / 5 + 32;
 
-function Bitcoin() {
-	document.getElementById("conversao").innerHTML = "R$ " + parseFloat(document.getElementById("real").value) + " valem ₿ " + (parseFloat(document.getElementById("real").value) * 0.0000041).toFixed(2) + " bitcoins."
+  var elementConverted = document.getElementById("conversao");
+
+  elementConverted.innerHTML =
+    valorK.toFixed(1) +
+    "°K equivale a " +
+    Celsius.toFixed(1) +
+    "°C e " +
+    Fahrenheit.toFixed(1) +
+    "°F.";
 }
